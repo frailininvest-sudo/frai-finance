@@ -1,0 +1,27 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#090b10"><title>Frai Finance V2</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head>
+<body><div class="app"><header><div><small>FINANCE COMMAND CENTER</small><h1>Frai Finance <em>V2</em></h1></div><button class="round" onclick="go('more')">⚙</button></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div class="label">SAFE TO SPEND</div><div id="safe" class="safe">$0.00</div><p>Disponible después de compromisos</p><div class="heroStats"><div><span>Balance</span><b id="bal">$0</b></div><div><span>Bills</span><b id="hbills">$0</b></div><div><span>Savings</span><b id="hsave">$0</b></div><div><span>Debt</span><b id="hdebt">$0</b></div></div></div>
+<div class="title"><h2>Agosto</h2><span>Resumen mensual</span></div><div class="grid2"><article><span>Ingresos</span><strong id="inc">$0</strong><small>↑ dinero recibido</small></article><article><span>Gastos</span><strong id="exp">$0</strong><small>↓ dinero utilizado</small></article></div>
+<div class="title"><h2>Gastos por categoría</h2><button onclick="go('budget')">Detalles</button></div><div class="chartCard"><div id="donut" class="donut"><div><b id="donutTotal">$0</b><span>gastado</span></div></div><div id="legend" class="legend"></div></div>
+<div class="title"><h2>Cuentas</h2><button onclick="openAccount()">+ Cuenta</button></div><div id="accounts" class="accounts"></div>
+<div class="title"><h2>Próximos bills</h2><button onclick="go('bills')">Ver calendario</button></div><div id="billPreview"></div>
+<div class="title"><h2>Movimientos recientes</h2><button onclick="go('transactions')">Ver todos</button></div><div id="recent"></div>
+</section>
+
+<section id="transactions" class="page"><div class="pageHead"><h2>Movimientos</h2><button onclick="openTx()">+ Agregar</button></div><input id="search" class="search" placeholder="Buscar movimientos..." oninput="renderTransactions()"><div class="filters"><button class="chip active" data-f="all" onclick="filterTx('all',this)">Todos</button><button class="chip" data-f="income" onclick="filterTx('income',this)">Ingresos</button><button class="chip" data-f="expense" onclick="filterTx('expense',this)">Gastos</button></div><div id="txList"></div></section>
+
+<section id="budget" class="page"><div class="pageHead"><h2>Presupuesto</h2><button onclick="openBudget()">+ Categoría</button></div><div class="summary"><span>Presupuesto restante</span><strong id="budgetRemain">$0</strong><div class="bar"><i id="overallBar"></i></div><small id="budgetSub"></small></div><div id="budgets"></div></section>
+
+<section id="bills" class="page"><div class="pageHead"><h2>Bills</h2><button onclick="openBill()">+ Bill</button></div><div class="summary"><span>Pendiente este mes</span><strong id="pendingBills">$0</strong><small>Los bills pendientes reducen Safe to Spend</small></div><div id="calendar" class="calendar"></div><div id="billsList"></div></section>
+
+<section id="goals" class="page"><div class="pageHead"><h2>Metas</h2><button onclick="openGoal()">+ Meta</button></div><div id="goalsList"></div><div class="pageHead"><h2>Deudas</h2><button onclick="openDebt()">+ Deuda</button></div><div id="debtsList"></div></section>
+
+<section id="more" class="page"><div class="pageHead"><h2>Más</h2></div><div class="menu"><button onclick="go('bills')"><span>🧾 Bills y calendario</span><b>›</b></button><button onclick="go('goals')"><span>🎯 Metas y deudas</span><b>›</b></button><button onclick="alert('Statements llegará en V3: importación de CSV/PDF y categorización.')"><span>📄 Statements</span><b>Próximamente ›</b></button><button onclick="exportData()"><span>⬇ Exportar backup</span><b>JSON ›</b></button><button onclick="resetDemo()"><span>↻ Restaurar demo</span><b>›</b></button></div><div class="privacy">🔒 Tus datos de esta versión permanecen en este navegador. No guardes CVV, PIN ni contraseñas bancarias.</div></section>
+</main>
+<button class="fab" onclick="openTx()">+</button>
+<nav><button class="nav active" data-p="home" onclick="go('home')"><i>⌂</i>Inicio</button><button class="nav" data-p="transactions" onclick="go('transactions')"><i>↔</i>Movimientos</button><button class="nav" data-p="budget" onclick="go('budget')"><i>▥</i>Budget</button><button class="nav" data-p="bills" onclick="go('bills')"><i>◫</i>Bills</button><button class="nav" data-p="more" onclick="go('more')"><i>•••</i>Más</button></nav></div>
+
+<div id="modal" class="modal"><div class="sheet"><div class="sheetHead"><h3 id="modalTitle"></h3><button onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div><div id="toast"></div>
+<script src="app.js"></script></body></html>
