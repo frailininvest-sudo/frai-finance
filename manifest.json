@@ -1,1 +1,8 @@
-{"name":"Frai Finance V2","short_name":"Frai Finance","start_url":"./index.html","display":"standalone","background_color":"#07090d","theme_color":"#090b10"}
+{
+  "name": "Frai Finance",
+  "short_name": "Frai Finance",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
