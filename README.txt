@@ -1,13 +1,13 @@
-FRAI FINANCE V3.1 — iPHONE FIX
+FRAI FINANCE V3.2 — WEEKLY MONEY PLAN
 
-Esta actualización corrige Safari/iPhone:
-- CSS forzado y versionado para evitar caché vieja.
-- Safe-area para Dynamic Island/Home Indicator.
-- Balance y Available to Spend separados.
-- Quick Actions en 4 columnas.
-- Botones y navegación con estilos consistentes en Safari.
-- Mantiene la app vacía y todos los datos locales existentes de V3.
+NEW
+- Bills automatically calculates how much you should save each week.
+- Formula: total monthly bills × 12 ÷ 52.
+- Weekly Bills Fund progress tracker.
+- Statistics: Week / Month / Year.
+- Previous/next week navigation.
+- Weekly Spent, Income and Left.
+- Category totals and percentages for the selected period.
+- Keeps the V3.1 iPhone/Safari design fix.
 
-SUBIR A GITHUB:
-Reemplaza index.html, style.css, app.js, manifest.json y README.txt.
-No necesitas volver a configurar GitHub Pages.
+Upload these 5 files to your existing frai-finance GitHub repository and Commit changes.

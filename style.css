@@ -114,3 +114,11 @@ nav{
 @media (min-width:650px){
   body{padding:20px}
 }
+
+/* ===== V3.2 Weekly Money Plan ===== */
+.weeklySaveCard{margin-top:12px;background:linear-gradient(145deg,#141514,#090a09);border:1px solid #26331a;border-radius:22px;padding:18px}
+.weeklySaveTop{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}.weeklySaveTop small{font-size:8px;letter-spacing:1.2px;color:#777d77}.weeklySaveTop h2{margin:4px 0 0;font-size:18px}.weeklySaveTop strong{font-size:25px;color:var(--lime);white-space:nowrap}
+.weeklySaveCard p{font-size:9px;line-height:1.5;color:#777d77;margin:9px 0 16px}.weeklyTrack>div:first-child{display:flex;justify-content:space-between;font-size:10px;margin-bottom:7px}.progress{height:8px;border-radius:99px;background:#202320;overflow:hidden}.progress i{display:block;width:0;height:100%;background:var(--lime);border-radius:99px;transition:.25s}
+.periodTabs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:#0c0d0c;border:1px solid #191c19;border-radius:14px;padding:4px;margin-bottom:10px}.periodTabs button{border:0;background:transparent!important;color:#858a85!important;border-radius:10px;padding:9px;font-weight:700}.periodTabs button.active{background:var(--lime)!important;color:#070907!important}
+.weekNav{display:flex;justify-content:space-between;align-items:center;margin:11px 0}.weekNav button{width:36px;height:32px;border:1px solid #1c201c;background:#101210!important;color:var(--lime)!important;border-radius:10px;font-size:20px}.weekNav b{font-size:11px}
+.weeklySummary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-bottom:12px}.weeklySummary>div{min-width:0;background:#0e100e;border:1px solid #191c19;border-radius:14px;padding:12px 9px}.weeklySummary small,.weeklySummary strong{display:block}.weeklySummary small{font-size:7px;letter-spacing:1px;color:#777c77}.weeklySummary strong{font-size:13px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.weeklySummary>div:nth-child(3) strong{color:var(--lime)}
